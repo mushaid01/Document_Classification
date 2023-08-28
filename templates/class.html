@@ -1,0 +1,15 @@
+<!-- FORM -1 -->
+{% if user.is_authenticated %}
+    <form method="post">
+		{% csrf_token %}
+		<h1>Classification Type</h1>
+		<label for="crypto">Select a Classification Type:</label>
+		<select name="choice" id="choice">
+		  <option value="1">Australian Standards</option>
+		  <option value="2">Defence Security Manual Australia</option>
+		  <option value="3">American Standards</option>
+		</select>
+		<input type="submit" value="Submit">
+	  </form>
+	  {% else %}
+	  {% endif %}

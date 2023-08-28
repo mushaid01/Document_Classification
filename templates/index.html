@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("/w3images/mac.jpg");
+  min-height: 100%;
+}
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
+
+
+/*General Styles*/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 16px;
+	font-family: "Raleway", sans-serif;
+	color: #555;
+}
+
+ul,
+nav {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	opacity: 0.75;
+	color: #fff;
+}
+
+a:hover {
+	opacity: 1;
+}
+
+a.btn {
+	border-radius: 4px;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: center;
+	background-color: #e07e7b;
+	opacity: 1;
+	transition: all 400ms;
+}
+
+a.btn:hover {
+	background-color: #ce5856;
+}
+
+section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 100px 80px;
+}
+
+section:not(.hero):nth-child(even) {
+	background-color: #f5f5f5;
+}
+
+.grid {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+hr {
+	width: 250px;
+	height: 3px;
+	background-color: #e07e7b;
+	border: 0;
+	margin-bottom: 50px;
+}
+
+
+
+section h3.title {
+	text-transform: capitalize;
+	font: bold 48px "Amatic SC", sans-serif;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+section p {
+	max-width: 775px;
+	line-height: 2;
+	padding: 0 20px;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+@media (max-width: 800px) {
+	section {
+		padding: 50px 20px;
+	}
+}
+
+/*Header Styles*/
+
+header {
+	position: absolute;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 35px 100px 0;
+	animation: 1s fadein 0.5s forwards;
+	opacity: 0;
+	color: #fff;
+	z-index: 2;
+}
+
+@keyframes fadein {
+	100% {
+		opacity: 1;
+	}
+}
+
+header h2 {
+	font-family: "Amatic SC", sans-serif;
+}
+
+header nav {
+	display: flex;
+	margin-right: -15px;
+}
+
+header nav li {
+	margin: 0 15px;
+}
+
+@media (max-width: 800px) {
+	header {
+		padding: 20px 50px;
+		flex-direction: column;
+	}
+
+	header h2 {
+		margin-bottom: 15px;
+	}
+}
+
+/*Hero Styles*/
+
+.hero {
+	position: relative;
+	justify-content: center;
+	text-align: center;
+	min-height: 100vh;
+	color: #fff;
+}
+
+.hero .background-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url("https://african.business/wp-content/uploads/2023/02/adobestock_293068579.jpeg");
+	background-size: cover;
+	z-index: -1;
+	background-color: #80a3db;
+}
+
+.hero h1 {
+	font: 72px "Amatic SC", sans-serif;
+	text-shadow: 2px 2px rgba(0, 0, 0, 0.3);
+	margin-bottom: 15px;
+}
+
+.hero h3 {
+	font: 28px "Raleway", sans-serif;
+	font-weight: 300;
+	text-shadow: 2px 2px rgba(0, 0, 0, 0.3);
+	margin-bottom: 40px;
+}
+
+.hero a.btn {
+	padding: 20px 46px;
+}
+
+.hero-content-area {
+	opacity: 0;
+	margin-top: 100px;
+	animation: 1s slidefade 1s forwards;
+}
+
+@keyframes slidefade {
+	100% {
+		opacity: 1;
+		margin: 0;
+	}
+}
+
+@media (max-width: 800px) {
+	.hero {
+		min-height: 600px;
+	}
+
+	.hero h1 {
+		font-size: 48px;
+	}
+
+	.hero h3 {
+		font-size: 24px;
+	}
+
+	.hero a.btn {
+		padding: 15px 40px;
+	}
+}
+    .pdf-box {
+            width: 400px;
+            height: 600px;
+            border: 1px solid #ccc;
+            overflow: auto;
+			display: inline-block;
+			margin-right: 20px;
+    }
+</style>
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+    <a href="{% url 'myapp:home' %}" class="w3-bar-item w3-button w3-wide"><i class="fa fa-unlock"></i> DOCUMENT CLASSIFICATION</a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
+      <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> WORK</a>
+      {% if user.is_authenticated %}
+      <a href="{% url 'myapp:my_files' %}" class="w3-bar-item w3-button"><i class="fa fa-th"></i> DASHBOARD</a>
+      <a href="{% url 'myapp:logout' %}" class="w3-bar-item w3-button"><i class="fa fa-user"></i> LOGOUT</a>
+      <a href="" class="w3-bar-item w3-button"><i class="fa fa-user"></i> Welcome @{{user}}</a>
+      {% else %}
+      <a href="{% url 'myapp:login' %}" class="w3-bar-item w3-button"><i class="fa fa-user"></i> LOGIN</a>
+      <a href="{% url 'myapp:register' %}" class="w3-bar-item w3-button"><i class="fa fa-user"></i> REGESTER</a>
+      {% endif %}
+    </div>
+
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+	{% block content %}
+	{% endblock content %}
+
+<!-- FORM -1 -->
+{% if user.is_authenticated %}
+    <form method="POST">
+		{% csrf_token %}
+		<h1>Classification Type</h1>
+		<label for="crypto">Select a Classification Type:</label>
+		<select name="choice" id="choice">
+		  <option value="1">Australian Standards</option>
+		  <option value="2">Defence Security Manual Australia</option>
+		  <option value="3">American Standards</option>
+		</select>
+		<input type="submit" value="Submit">
+	  </form>
+	  {% else %}
+
+	  <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Raleway" rel="stylesheet">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	  <section class="hero">
+		<div class="background-image"></div>
+		<div class="hero-content-area">
+		  <h1>Safety lies in the accurate classification of documents!</h1>
+		  <h3>Maintaining trust and compliance</h3>
+		  <a href="{% url 'myapp:register' %}" class="btn">Regester Now</a>
+		</div>
+	  </section>
+	  {% endif %}
+
+	  <!-- FORM-2 -->
+{% if request.method == 'POST' %}
+<form method="post">
+	{% csrf_token %}
+	<h1>TIER TYPE</h1>
+	<label for="crypto">Select a Tier Type:</label>
+	<select name="choice1" id="choice1">
+	  <option value="FREE">$0-FREE-50MB</option>
+	  <option value="LEVEL1">$50-LEVEL1-200MB</option>
+	  <option value="LEVEL2">$100-LEVEL2-400MB</option>
+	</select>
+	<input type="submit" value="Submit">
+  </form>
+  {% else %}
+  {% endif %}
+  
+</body>
+
+</html>

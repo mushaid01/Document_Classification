@@ -1,0 +1,15 @@
+<!-- FORM-2 -->
+{% if user.is_authenticated %}
+    <form method="post">
+		{% csrf_token %}
+		<h1>TIER TYPE</h1>
+		<label for="crypto">Select a Tier Type:</label>
+		<select name="choice" id="choice">
+		  <option value="FREE">$0-FREE-50MB</option>
+		  <option value="LEVEL1">$50-LEVEL1-200MB</option>
+		  <option value="LEVEL2">$100-LEVEL2-400MB</option>
+		</select>
+		<input type="submit" value="Submit">
+	  </form>
+	  {% else %}
+	  {% endif %}
